@@ -1,3 +1,4 @@
+// 메인
 const recommendations = [
     {
         query: "경의원",
@@ -48,7 +49,7 @@ const recommendations = [
         text: "출간 기념 대여 할인 + 리뷰 할인 포인트"
     }
 ];
-
+// 지금 많이 읽고있는 작품
 const popularBooks = [
     {
         rank: 1,
@@ -172,20 +173,21 @@ const popularBooks = [
     },
     {
         rank: 18,
-        query: "은하영웅전설 1",
-        title: "은하영웅전설 1",
+        query: "은하영웅전설 10권",
+        title: "은하영웅전설 15권 세트",
         author: "다나카 요시키 외 1명",
         rating: "4.7 (954)"
     }
 ];
 
+// 오늘 리디의 발견
 const section2Books = [
     {
         query: "그랬다고 적었다",
         text: "7년 만의 산문집 <br>+김애란 작가전"
     },
     {
-        query: "은하영웅전설 1",
+        query: "은하영웅전설 10권",
         text: "50년 대여로 만나는 <br>우주의 삼국지"
     },
     {
@@ -209,6 +211,359 @@ const section2Books = [
         text: "[50년 대여] <br>버핏과 멍거의 지혜"
     }
 ];
+
+// 이벤트
+const events = [
+    {
+        query: "세입자"
+    },
+    {
+        query: "잠들면 눈 뜬다"
+    },
+    {
+        query: "산군"
+    }
+];
+ 
+// 베스트
+const bestBooks = [
+    {
+        rank: 1,
+        query: "경의원",
+        title: "경의원",
+        author: "이도현",
+        rating: "4.9 (302)"
+    },
+
+    {    rank: 2,
+        query: "요미",
+        title: "요미 키우기.swf",
+        author: "이사구",
+        rating: "4.9 (147)",
+        image: "./img/main/요미키우기.jpg"
+    },
+
+    {
+        rank: 3,
+        query: "주인공이 너무 많다",
+        title: "주인공이 너무 많다",
+        author: "최민호",
+        rating: "4.8 (147)"
+    },
+    {
+        rank: 4,
+        query: "사람 보는 눈",
+        title: "사람 보는 눈",
+        author: "이나경",
+        rating: "4.8 (146)",
+        image: "./img/main/사람보는눈.jpg"
+    },
+    {
+        rank: 5,
+        query: "테세우스",
+        title: "테세우스의 나무",
+        author: "김나은",
+        rating: "4.8 (557)",
+        image:"./img/main/테세우스의 나무.jpg"
+    },
+    {
+        rank: 6,
+        query: "뒤틀린 사랑",
+        title: "뒤틀린 사랑",
+        author: "아나 황 외 1명",
+        rating: "3.7 (3)"
+    },
+    {
+        rank: 7,
+        query: "오디세이아",
+        title: "오디세이아(영화 <오디세이아>)",
+        author: "호메로스 외 2명",
+        rating: "4.4 (18)"
+    },
+    {
+        rank: 8,
+        query: "독성 인간",
+        title: "독성 인간",
+        author: "리앤 텐 브링크 외 1명",
+        rating: "0"
+    },
+    {
+        rank: 9,
+        query: "프로젝트 헤일메리",
+        title: "프로젝트 헤일메리",
+        author: "앤디 위어 외 1명",
+        rating: "4.9 (3,990)"
+    },
+    {
+        rank: 10,
+        query: "빵충 사육 준수 사항",
+        title: "빵충 사육 준수 사랑",
+        author: "김혜영        ",
+        rating: "5.0 (3)"
+    },
+    {
+        rank: 11,
+        query: "어떻게 살아낼 것인가",
+        title: "어떻게 살아낼 것인가",
+        author: "짐 콜린스 외 2명",
+        rating: "0"
+    },
+    {
+        rank: 12,
+        query: "찌니주의보",
+        title: "찌니주의보",
+        author: "정지아",
+        rating: "4.5 (12)"
+    },
+    {
+        rank: 13,
+        query: "용의자 X의 헌신",
+        title: "용의자 X의 헌신",
+        author: "히가시노 게이고 외 1명",
+        rating: "4.7 (993)"
+    },
+    {
+        rank: 14,
+        query: "싯다르타",
+        title: "싯다르타",
+        author: "헤르만 헤세 외 1명",
+        rating: "4.6 (237)"
+    },
+    {
+        rank: 15,
+        query: "주와 연",
+        title: "주와 연",
+        author: "청예",
+        rating: "4.2 (17)"
+    },
+    {
+        rank: 16,
+        query: "고독 사용 설명서",
+        title: "고독 사용 설명서",
+        author: "로버트 J. 코플란 외 1명",
+        rating: "4.8 (1,922)"
+    },
+    {
+        rank: 17,
+        query: "챗GPT·제미나이·클로드까지 모두를 위한 AI",
+        title: "챗GPT·제미나이·클로드까지 모두를 위한 AI",
+        author: "지현이",
+        rating: "3.7 (3)"
+    },
+    {
+        rank: 18,
+        query: "은하영웅전설 10권",
+        title: "은하영웅전설 15권 세트",
+        author: "다나카 요시키 외 1명",
+        rating: "4.7 (954)"
+    }
+];
+
+// 새로 나온 작품
+const newworkBooks = [
+    {
+        query: "빵충 사육 준수 사항",
+        title: "빵충 사육 준수 사항",
+        author: "김혜영",
+        rating: "5.0 (3)"
+    },
+    {
+        query: "부처의 감정 수업",
+        title: "부처의 감정 수업",
+        author: "자현",
+        rating: "5.0 (1)"
+    },
+    {
+        query: "웃는 흉터",
+        title: "웃는 흉터",
+        author: "김보나",
+        rating: "0"
+    },
+    {
+        query: "어두운 집",
+        title: "어두운 집",
+        author: "전건우",
+        rating: "0"
+    },
+    {
+        query: "단편들, 한국 공포 문학의 셋째 밤",
+        title: "단편들, 한국 공포 문학의 셋째 밤",
+        author: "일월명, 클레이븐, 배예람, 김아직, 차삼동, 영선, 현이랑, 이상준, 창궁",
+        rating: "0"
+    },
+    {
+        query: "슬로 호시스",
+        title: "슬로 호시스",
+        author: "믹 헤런",
+        rating: "0"
+    },
+    {
+        query: "클로드 코드 제대로 시작하기",
+        title: "클로드 코드 제대로 시작하기",
+        author: "주홍철, 황진성",
+        rating: "0"
+    },
+    {
+        query: "초풍요의 시대",
+        title: "초풍요의 시대",
+        author: "피터 디아만디스, 스티븐 코틀러, 김태훈",
+        rating: "0"
+    },
+    {
+        query: "조용히 해내는 사람",
+        title: "조용히 해내는 사람",
+        author: "이재은",
+        rating: "0"
+    },
+    {
+        query: "에티의 여름",
+        title: "에티의 여름",
+        author: "루시 스타즈",
+        rating: "0"
+    },
+    {
+        query: "세상을 만들어라",
+        title: "세상을 만들어라",
+        author: "리하르트 다비트 프레히트, 박종대",
+        rating: "0"
+    },
+    {
+        query: "문해내공",
+        title: "문해내공",
+        author: "신종호, 김윤정",
+        rating: "0"
+    },
+    {
+        query: "코리아타운의 핫 칙 샤먼",
+        title: "코리아타운의 핫 칙 샤먼",
+        author: "전효원",
+        rating: "0"
+    },
+    {
+        query: "애거사 크리스티 미스터리",
+        title: "애거사 크리스티 미스터리",
+        author: "마리 베니딕트, 백지민",
+        rating: "0"
+    },
+    {
+        query: "언어화를 위한 소설 사고",
+        title: "언어화를 위한 소설 사고",
+        author: "오가와 사토시, 박대겸",
+        rating: "0"
+    },
+    {
+        query: "혹시 나한테 화났나?",
+        title: "혹시 나한테 화났나?",
+        author: "멕 조지프슨",
+        rating: "0"
+    },
+];
+
+// 오디세이
+const odysseyBooks = [
+    {
+        query: "이윤기의 그리스 로마 신화1",
+        title: "[50년 대여] 개정판|이윤기의 그리스 로마 신화",
+        author: "김혜영",
+        rating: "0"
+    },
+    {
+        query: "오디세이아",
+        title: "오디세이아(영화<오디세이아>원작)",
+        author: "호메로스, 페테르 파울 루벤스, 박문재",
+        rating: "4.1 (22)"
+    },
+    {
+        query: "이윤기의 그리스 로마 신화5 ",
+        title: "[50년 대여] 개정판|이윤기의 그리스로마 신화5",
+        author: "이윤기",
+        rating: "5.0 (4)"
+    },
+    {
+        query: "페넬로피아드",
+        title: "페넬로피아드",
+        author: "마거릿 애트우드, 김진준",
+        rating: "4.4 (5)"
+    },
+    {
+        query: "키르케",
+        title: "키르케",
+        author: "매들린 밀러, 이은선",
+        rating: "4.7 (136)"
+    },
+    {
+        query: "만화로 보는 일리아스",
+        title: "만화로 보는 일리아스",
+        author: "동사원형, 강대진",
+        rating: "4.9 (32)"
+    },
+    {
+        query: "일리아스",
+        title: "일리아스",
+        author: "주홍철, 황진성",
+        rating: "5.0 (5)"
+    },
+    {
+        query: "김헌의 그리스 로마 신화",
+        title: "김헌의 그리스 로마 신화",
+        author: "김헌",
+        rating: "4.3 (11)"
+    },
+];
+
+// 히가시노 게이고
+const keigoBooks = [
+    {
+        query: "용의자 X의 헌신",
+        title: "용의자 X의 헌신",
+        author: "김혜영",
+        rating: "0"
+    },
+    {
+        query: "매스커레이드 라이프",
+        title: "매스커레이드 라이프",
+        author: "호메로스, 페테르 파울 루벤스, 박문재",
+        rating: "4.1 (22)"
+    },
+    {
+        query: "백야행1",
+        title: "백야행1",
+        author: "이윤기",
+        rating: "5.0 (4)"
+    },
+    {
+        query: "나미야 잡화점의 기적",
+        title: "나미야 잡화점의 기적",
+        author: "마거릿 애트우드, 김진준",
+        rating: "4.4 (5)"
+    },
+    {
+        query: "가면 산장 살인 사건",
+        title: "가면 산장 살인 사건",
+        author: "매들린 밀러, 이은선",
+        rating: "4.7 (136)"
+    },
+    {
+        query: "가공범",
+        title: "가공범",
+        author: "동사원형, 강대진",
+        rating: "4.9 (32)"
+    },
+    {
+        query: "하쿠바산장 살인사건",
+        title: "하쿠바산장 살인사건",
+        author: "주홍철, 황진성",
+        rating: "5.0 (5)"
+    },
+    {
+        query: "당신이 누군가를 죽였다",
+        title: "당신이 누군가를 죽였다",
+        author: "김헌",
+        rating: "4.3 (11)"
+    },
+];
+
+// ------책 설정------ //
 
 //  slider 책정보
  async function fetchBooks(query) {
@@ -269,9 +624,9 @@ const section2Books = [
     bookData();
 
     // section1 책정보
-        async function popularBookData() {
+    async function popularBookData() {
 
-    try {
+        try {
 
         const boxes = document.querySelectorAll(
             "#section1 .first_box"
@@ -369,3 +724,251 @@ popularBookData();
     }
 
     section2BookData();
+
+    // 이벤트 도서
+    async function eventBookData() {
+
+    try {
+
+        const boxes = document.querySelectorAll("#event .event_box");
+
+        for (let i = 0; i < events.length; i++) {
+
+            const item = events[i];
+
+            const data = await fetchBooks(item.query);
+
+            const book = data.documents[0];
+
+            if (!book) continue;
+
+            boxes[i].insertAdjacentHTML("beforeend", `
+                <img src="${book.thumbnail}" alt="${book.title}">
+            `);
+        }
+
+    } catch (error) {
+
+        console.error("이벤트 에러:", error);
+
+    }
+}
+
+eventBookData();
+
+    // 베스트셀러
+    async function bestBookData() {
+
+        try {
+
+        const boxes = document.querySelectorAll(
+            "#bestseller .two_box"
+        );
+
+        for (let i = 0; i < bestBooks.length; i++) {
+
+            const item = bestBooks[i];
+
+            const data = await fetchBooks(item.query);
+
+            const book = data.documents[0];
+
+            if (!book) continue;
+
+            const page = Math.floor(i / 9);
+
+            boxes[page].innerHTML += `
+                <div class="best_book">
+
+                    <img src="${item.image || book.thumbnail}" alt="${item.title}">
+
+                    <div class="book_rank">
+                        ${item.rank}
+                    </div>
+
+                    <div class="book_info">
+
+                        <h3>${item.title}</h3>
+
+                        <p>${item.author}</p>
+
+                        <span>
+                            ${
+                                item.rating === "0"
+                                ? `<em>★0</em>`
+                                : `
+                                    <b class="star">★</b>
+                                    <b class="rating">${item.rating.split(" ")[0]}</b>
+                                    <em>${item.rating.substring(item.rating.indexOf(" "))}</em>
+                                `
+                            }
+                        </span>
+
+                    </div>
+
+                </div>
+            `;
+        }
+
+    } catch (error) {
+
+        console.error("에러 발생:", error);
+
+    }
+}
+
+bestBookData();
+
+    // 새로 나온 작품
+    async function newworkBookData() {
+
+        try {
+
+            const boxes = document.querySelectorAll(
+            "#newwork .swiper-slide"
+            );
+
+            for (let i = 0; i < newworkBooks.length; i++) {
+
+                const item = newworkBooks[i];
+
+                const data = await fetchBooks(item.query);
+
+                const book = data.documents[0];
+
+                if (!book) continue;
+
+                boxes[i].innerHTML = `
+                    <img src="${book.thumbnail}" alt="${item.title}">
+
+                    <div class="book_info">
+
+                        <h3>${item.title}</h3>
+
+                        <p>${item.author}</p>
+
+                        <span>
+                            <b class="star">★</b>
+                            <b class="rating">
+                                ${item.rating.split(" ")[0]}
+                            </b>
+                            <em>
+                                ${item.rating.substring(item.rating.indexOf(" "))}
+                            </em>
+                        </span>
+
+                    </div>
+                `;
+            }
+
+        } catch (error) {
+
+            console.error("newwork 에러:", error);
+
+        }
+    }
+
+    newworkBookData();
+
+    // 오디세이랑 함께 보면 좋아요!
+    async function odysseyBookData() {
+
+        try {
+
+            const boxes = document.querySelectorAll(
+                "#odyssey .swiper-slide"
+            );
+
+            for (let i = 0; i < odysseyBooks.length; i++) {
+
+                const item = odysseyBooks[i];
+
+                const data = await fetchBooks(item.query);
+
+                const book = data.documents[0];
+
+                if (!book) continue;
+
+                boxes[i].innerHTML = `
+                    <img src="${book.thumbnail}" alt="${item.title}">
+
+                    <div class="book_info">
+
+                        <h3>${item.title}</h3>
+
+                        <p>${item.author}</p>
+
+                        <span>
+                            <b class="star">★</b>
+                            <b class="rating">
+                                ${item.rating.split(" ")[0]}
+                            </b>
+                            <em>
+                                ${item.rating.substring(item.rating.indexOf(" "))}
+                            </em>
+                        </span>
+
+                    </div>
+                `;
+            }
+
+        } catch (error) {
+
+            console.error("newwork 에러:", error);
+
+        }
+    }
+
+    odysseyBookData();
+
+
+    // 히가시노 게이고 대표작
+    async function keigoBookData() {
+
+        try {
+
+            const boxes = document.querySelectorAll(
+                "#keigo .swiper-slide"
+            );
+
+            for (let i = 0; i < keigoBooks.length; i++) {
+
+                const item = keigoBooks[i];
+
+                const data = await fetchBooks(item.query);
+
+                const book = data.documents[0];
+
+                if (!book) continue;
+
+                boxes[i].innerHTML = `
+                    <img src="${book.thumbnail}" alt="${item.title}">
+
+                    <div class="book_info">
+
+                        <h3>${item.title}</h3>
+
+                        <p>${item.author}</p>
+
+                        <span>
+                            <b class="star">★</b>
+                            <b class="rating">
+                                ${item.rating.split(" ")[0]}
+                            </b>
+                            <em>
+                                ${item.rating.substring(item.rating.indexOf(" "))}
+                            </em>
+                        </span>
+
+                    </div>
+                `;
+            }
+
+        } catch (error) {
+
+            console.error("newwork 에러:", error);
+
+        }
+    }
+
+    keigoBookData();
