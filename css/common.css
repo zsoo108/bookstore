@@ -96,7 +96,7 @@ header {width: 100%;
 #header_top .member a {
     text-decoration: none;
     color: #333;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 
@@ -114,9 +114,9 @@ header {width: 100%;
 
 #header_main .nav a {
     text-decoration: none;
-    color: #333;
+    color: gray;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 
@@ -136,7 +136,7 @@ header {width: 100%;
 footer {
     width: 100%;
     height: 350px;
-    border-top: 5px solid #eee;   
+    border-top: 1px solid #eee;   
 }
 
 #footer_top {

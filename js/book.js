@@ -297,8 +297,8 @@ const bestBooks = [
     {
         rank: 10,
         query: "빵충 사육 준수 사항",
-        title: "빵충 사육 준수 사랑",
-        author: "김혜영        ",
+        title: "빵충 사육 준수 사항",
+        author: "김혜영",
         rating: "5.0 (3)"
     },
     {
@@ -516,52 +516,205 @@ const keigoBooks = [
     {
         query: "용의자 X의 헌신",
         title: "용의자 X의 헌신",
-        author: "김혜영",
-        rating: "0"
+        author: "히가시노 게이고, 양억관",
+        rating: "4.7 (980)"
     },
     {
         query: "매스커레이드 라이프",
         title: "매스커레이드 라이프",
-        author: "호메로스, 페테르 파울 루벤스, 박문재",
-        rating: "4.1 (22)"
+        author: "히가시노 게이고, 김은모",
+        rating: "4.9 (10)"
     },
     {
-        query: "백야행1",
-        title: "백야행1",
-        author: "이윤기",
-        rating: "5.0 (4)"
+        query: "백야행 1",
+        title: "백야행 1",
+        author: "히가시노 게이고, 김난주",
+        rating: "4.7 (102)"
     },
     {
         query: "나미야 잡화점의 기적",
         title: "나미야 잡화점의 기적",
-        author: "마거릿 애트우드, 김진준",
-        rating: "4.4 (5)"
+        author: "히가시노 게이고, 양윤옥",
+        rating: "4.6 (4,527)"
     },
     {
         query: "가면 산장 살인 사건",
         title: "가면 산장 살인 사건",
-        author: "매들린 밀러, 이은선",
-        rating: "4.7 (136)"
+        author: "히가시노 게이고, 김난주",
+        rating: "4.2     (278)"
     },
     {
         query: "가공범",
         title: "가공범",
-        author: "동사원형, 강대진",
-        rating: "4.9 (32)"
+        author: "히가시노게이고, 김선영",
+        rating: "4.5 (32)"
     },
     {
-        query: "하쿠바산장 살인사건",
-        title: "하쿠바산장 살인사건",
-        author: "주홍철, 황진성",
-        rating: "5.0 (5)"
+        query: "눈에 갇힌 외딴 산장에서",
+        title: "눈에 갇힌 외딴 산장에서",
+        author: "히가시노 게이고, 김난주",
+        rating: "3.8 (122)"
     },
     {
         query: "당신이 누군가를 죽였다",
         title: "당신이 누군가를 죽였다",
-        author: "김헌",
-        rating: "4.3 (11)"
+        author: "히가시노 게이고, 최고은",
+        rating: "4.2 (64)"
     },
 ];
+
+// 우주라이크 소설
+const novels = [
+    {
+        title: "요미 키우기.swf",
+        author: "이사구",
+        image: "./img/main/요미확대.jpg"
+    },
+    {
+        title: "테세우스의 나무",
+        author: "김나은",
+        image: "./img/main/나무 확대.jpg"
+    },
+    {
+        title: "사람 보는 눈",
+        author: "이나경",
+        image: "./img/main/눈확대.jpg"
+    },
+    {
+        title: "주인공이 너무 많다",
+        author: "최민호",
+        image: "./img/main/주인공확대.jpg"
+    },
+    {
+        title: "혼자 남아도 외로워하지 말 것",
+        author: "경민선",
+        image: "./img/main/외로워확대.jpg"
+    }
+];
+
+
+// 지금, 리디에서만 볼 수 있는 도서
+const onlyridiBooks = [
+    {
+        query: "요미",
+        title: "요미 키우기.swf",
+        author: "이사구",
+        rating: "4.9 (168)",
+        image: "./img/main/요미키우기.jpg",
+        small: true
+    },
+
+    {
+        query: "사람 보는 눈",
+        title: "사람 보는 눈",
+        author: "이나경",
+        rating: "4.8 (146)",
+        image: "./img/main/사람보는눈.jpg",
+        small: true
+    },
+
+    {
+        query: "주인공",
+        title: "주인공이 너무 많다",
+        author: "최민호",
+        image: "./img/main/주인공이너무많다.jpg",
+        rating: "4.8 (147)",
+        small: true
+    },
+    {
+        query: "테세우스",
+        title: "테세우스의 나무",
+        author: "김나은",
+        rating: "4.7 (138)",
+        image:"./img/main/테세우스의 나무.jpg",
+        small: true
+    },
+    {
+        query: "알리바이의 해부학",
+        title: "알리바이의 해부학",
+        author: "애슐리 엘스턴, 엄일녀",
+        rating: "5.0 (2)"
+    },
+    {
+        query: "미스터리 세계사 지식도감",
+        title: "지도로 읽는다 미스터리 세계사 지식도감",
+        author: "안혜은",
+        rating: "5.0 (2)"
+    },
+    {
+        query: "바이바이 스트레인지니스",
+        title: "바이바이 스트레인지니스",
+        author: "이산화",
+        rating: "4.9 (451)",
+        image: "./img/main/바이바이.jpg",
+        small: true
+    },
+    {
+        query: "혼자 남아도 외로워하지 말 것",
+        title: "혼자 남아도 외로워하지 말 것",
+        author: "경민선",
+        rating: "4.9 (509)",
+        image: "./img/main/혼자남아도.jpg",
+        small: true
+    },
+    {
+        query: "밸런스 게임",
+        title: "밸런스 게임",
+        author: "박하루",
+        rating: "4.8 (457)",
+        image: "./img/main/밸런스게임.jpg",
+        small: true
+    },
+    {
+        query: "가진 집",
+        title: "가진 집",
+        author: "이랑",
+        rating: "4.7 (325)",
+        image: "./img/main/가진집.jpg",
+        small: true
+    },
+    {
+        query: "꿈 교환의 법칙",
+        title: "꿈 교환의 법칙",
+        author: "이수현",
+        rating: "4.9 (518)",
+        image: "./img/main/꿈교환.jpg",
+        small: true
+    },
+    {
+        query: "타지 마,죽지 마,나의 마녀야",
+        title: "타지 마,죽지 마,나의 마녀야",
+        author: "김달리",
+        rating: "4.8 (413)",
+        image: "./img/main/마녀야.jpg",
+        small: true
+    },
+    {
+        query: "나의 오늘도 죽음의 매듭을 맺는다",
+        title: "나의 오늘도 죽음의 매듭을 맺는다",
+        author: "허지은",
+        rating: "4.5 (79)",
+        image: "./img/main/죽음의매듭",
+        small: true
+    },
+    {
+        query: "다정한 악당들",
+        title: "다정한 악당들",
+        author: "이나경",
+        rating: "4.9 (170)",
+        image: "./img/main/다정한악당들",
+        small: true
+    },
+    {
+        query: "우리가 더는 만나지 않을 때",
+        title: "우리가 더는 만나지 않을 때",
+        author: "김준녕",
+        rating: "4.8 (202)",
+        image: "./img/main/우리가더는만나지않을때",
+        small: true
+    },
+];
+
 
 // ------책 설정------ //
 
@@ -848,13 +1001,15 @@ bestBookData();
                         <p>${item.author}</p>
 
                         <span>
-                            <b class="star">★</b>
-                            <b class="rating">
-                                ${item.rating.split(" ")[0]}
-                            </b>
-                            <em>
-                                ${item.rating.substring(item.rating.indexOf(" "))}
-                            </em>
+                            ${
+                                item.rating === "0"
+                                ? `<em>★0</em>`
+                                : `
+                                    <b class="star">★</b>
+                                    <b class="rating">${item.rating.split(" ")[0]}</b>
+                                    <em>${item.rating.substring(item.rating.indexOf(" "))}</em>
+                                `
+                            }
                         </span>
 
                     </div>
@@ -899,13 +1054,15 @@ bestBookData();
                         <p>${item.author}</p>
 
                         <span>
-                            <b class="star">★</b>
-                            <b class="rating">
-                                ${item.rating.split(" ")[0]}
-                            </b>
-                            <em>
-                                ${item.rating.substring(item.rating.indexOf(" "))}
-                            </em>
+                            ${
+                                item.rating === "0"
+                                ? `<em>★0</em>`
+                                : `
+                                    <b class="star">★</b>
+                                    <b class="rating">${item.rating.split(" ")[0]}</b>
+                                    <em>${item.rating.substring(item.rating.indexOf(" "))}</em>
+                                `
+                            }
                         </span>
 
                     </div>
@@ -972,3 +1129,142 @@ bestBookData();
     }
 
     keigoBookData();
+
+    // 우주라이크소설
+    function novelBookData() {
+
+    try {
+
+        const boxes = document.querySelectorAll("#novel .novel_box");
+
+        for (let i = 0; i < novels.length; i++) {
+
+            const item = novels[i];
+
+            if (!boxes[i]) continue;
+
+            boxes[i].insertAdjacentHTML("afterbegin", `
+                <img src="${item.image}" alt="${item.title}">
+            `);
+        }
+
+    } catch (error) {
+
+        console.error("소설 에러:", error);
+
+    }
+}
+
+novelBookData();
+
+    // 지금, 리디에서만 볼 수 있는 도서
+    async function onlyridiBookData() {
+    try {
+        const boxes = document.querySelectorAll(
+            "#onlyridi .swiper-slide"
+        );
+
+        for (let i = 0; i < onlyridiBooks.length; i++) {
+
+            const item = onlyridiBooks[i];
+
+            const data = await fetchBooks(item.query);
+            const book = data.documents[0];
+
+            if (!boxes[i]) continue;
+
+            const image = item.image || (book && book.thumbnail);
+
+            if (!image) continue;
+
+            boxes[i].innerHTML = `
+                <div class="onlyridi_book ${item.small ? "small_book" : ""}">
+
+                    <img 
+                        src="${image}" 
+                        alt="${item.title}"
+                    >
+                    <div class="book_info">
+
+                        <h3>${item.title}</h3>
+                        <p>${item.author}</p>
+
+                        <span>
+                            ${
+                                item.rating === "0"
+                                ? `<em>★0</em>`
+                                : `
+                                    <b class="star">★</b>
+                                    <b class="rating">
+                                        ${item.rating.split(" ")[0]}
+                                    </b>
+                                    <em>
+                                        ${item.rating.substring(
+                                            item.rating.indexOf(" ")
+                                        )}
+                                    </em>
+                                `
+                            }
+                        </span>
+
+                    </div>
+
+                </div>
+            `;
+        }
+
+    } catch (error) {
+        console.error("에러 발생:", error);
+    }
+}
+
+onlyridiBookData();
+
+    document.addEventListener("DOMContentLoaded", async function () {
+                try {
+                    const response = await fetch("./sub_txt/txt1.txt");
+                    if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                    }
+                    const data = await response.text();
+                    document.getElementById("tmpBox").innerHTML = data;
+                } catch (error) {
+                    console.error("There was a problem with the fetch operation:", error);
+                }
+            });
+
+// ----------------------- 서브 페이지 --------------------------- //
+
+    // 서브 메인 책
+    async function submainBookData() {
+
+        const data = await fetchBooks("용의자 X의 헌신");
+        const book = data.documents[0];
+
+        if (!book) return;
+
+        document.querySelector(".submain_left").innerHTML = `
+        <div class="book_cover">
+            <img src="${book.thumbnail}" alt="${book.title}">
+            <button class="preview_btn">미리보기</button>
+        </div>
+
+        <div class="book_info">
+            <p>소설 > 일본 소설</p>
+            <h2>${book.title}</h2>
+            <p>★4.7 (955) | 관심 500</p>
+            <p>${book.authors.join(", ")} 작가 ${book.translators.join(", ")} 출판</p>
+            <p>${book.publisher} 출판</p>
+            <button>+ 관심</button>
+
+            <div class="book_buttons">
+                <button>하트</button>
+                <button>장바구니</button>
+                <button>선물</button>
+                <button>소장</button>
+                
+            </div>
+        </div>
+        `;
+    }
+    submainBookData();

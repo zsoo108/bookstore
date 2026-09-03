@@ -1,0 +1,82 @@
+#submain {
+    width: 100%;
+    height: 500px;
+    border-top: 2px solid #eee;
+    
+}
+
+#submain .container {
+    width: 1120px;
+    height: 100%;
+    margin: 0 auto;
+
+    /* 왼,오 구역 나눔 */
+    display: flex;
+}
+
+.submain_left {
+    flex: 1;
+    padding-right: 20px;
+    padding-top: 30px;
+    display: flex;
+    gap: 30px;
+    width: calc(100% - 222px);
+}
+
+.submain_right {
+    width: 222px;
+    padding-top: 30px;
+    border-left : 3px solid #eee;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.book_cover {
+    width: 200px;
+}
+
+.book_cover img {
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.preview_btn {
+    width: 200px;
+    height: 45px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.book_info {
+    flex: 1;
+}
+
+.book_info button {
+    width: 70px;
+    height: 35px;
+    margin-top: 15px;
+    border-radius: 40%;
+    border: 1px solid #1796eb;
+    color: #1796eb;
+    background-color: white;
+    font-weight: 600;
+}
+
+.book_buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.book_buttons button {
+    height: 45px;
+    padding: 0 20px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+}

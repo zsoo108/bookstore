@@ -314,3 +314,62 @@
         }
     });
     updateKeigoPage();
+
+    // 지금, 리디에서만 볼수 있는 도서
+    var onlyridiSwiper = new Swiper(".onlyridiSwiper", {
+    slidesPerView: 6,
+    spaceBetween: 2,
+    allowTouchMove: false,
+    navigation: {
+        nextEl: "#onlyridi .swiper-button-next",
+        prevEl: "#onlyridi .swiper-button-prev",
+    },
+    allowTouchMove: false
+    });
+    const onlyridiPrev = document.querySelector(
+        "#onlyridi .swiper-button-prev"
+    );
+    const onlyridiNext = document.querySelector(
+        "#onlyridi .swiper-button-next"
+    );
+
+    let onlyridiPage = 1;
+
+    function updateonlyridiPage() {
+
+        if (onlyridiPage === 1) {
+            onlyridiSwiper.slideTo(0);
+            onlyridiPrev.style.display = "none";
+            onlyridiNext.style.display = "flex";
+        } 
+    
+        else if (onlyridiPage === 2) {
+            onlyridiSwiper.slideTo(6);
+            onlyridiPrev.style.display = "flex";
+            onlyridiNext.style.display = "flex";
+        }
+
+        else if (onlyridiPage === 3) {
+
+            onlyridiSwiper.slideTo(9);
+
+            onlyridiPrev.style.display = "flex";
+            onlyridiNext.style.display = "none";
+        }
+    }
+
+    onlyridiNext.addEventListener("click", function () {
+        if (onlyridiPage < 3) {
+        onlyridiPage++;
+        updateonlyridiPage();
+        }
+    });
+
+    onlyridiPrev.addEventListener("click", function () {
+
+        if (onlyridiPage > 1) {
+        onlyridiPage --;
+        updateonlyridiPage();
+        }
+    });
+    updateonlyridiPage();
