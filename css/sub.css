@@ -1,82 +1,338 @@
+@charset "utf-8";
+
+ol li {list-style: none;}
+
+* { margin: 0;
+    padding: 0;}
+
 #submain {
     width: 100%;
-    height: 500px;
-    border-top: 2px solid #eee;
-    
 }
 
 #submain .container {
     width: 1120px;
-    height: 100%;
-    margin: 0 auto;
-
-    /* 왼,오 구역 나눔 */
     display: flex;
-}
-
-.submain_left {
-    flex: 1;
-    padding-right: 20px;
-    padding-top: 30px;
-    display: flex;
-    gap: 30px;
-    width: calc(100% - 222px);
-}
-
-.submain_right {
-    width: 222px;
-    padding-top: 30px;
-    border-left : 3px solid #eee;
-    padding-left: 20px;
+    align-items: flex-start;
     box-sizing: border-box;
 }
 
-.book_cover {
-    width: 200px;
+/* 오른쪽구역 */
+.submain_right {
+    width: 20%;
+    height: 3000px;
+    padding-left: 30px;
+    border-left: 1px solid #ddd;
+    box-sizing: border-box;
 }
 
-.book_cover img {
+.submain_right h2{
+    margin: 20px 0 0;
+    font-size: 14px;
+}
+
+.best_list{
+    margin: 10px 0 0;
+    padding-left: 0;
+}
+
+.best_list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.best_list li a {
+    width: 100%;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+
+.best_list li::before {
+    color: rgb(214, 1, 1);
+    font-weight: 600;
+    display: inline-block;
+    width: 30px;
+}
+
+.best_list li:nth-child(1)::before { content: "1"; }
+.best_list li:nth-child(2)::before { content: "2"; }
+.best_list li:nth-child(3)::before { content: "3"; }
+.best_list li:nth-child(4)::before { content: "4"; }
+.best_list li:nth-child(5)::before { content: "5"; }
+.best_list li:nth-child(6)::before { content: "6"; }
+.best_list li:nth-child(7)::before { content: "7"; }
+.best_list li:nth-child(8)::before { content: "8"; }
+.best_list li:nth-child(9)::before { content: "9"; }
+.best_list li:nth-child(10)::before { content: "10"; }
+
+/* 왼쪽구역 */
+.submain_left {
+    width: 80%;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.book_top {
+    display: flex;
+    gap: 40px;
+}
+
+.book_image_wrap{
     width: 200px;
-    height: 300px;
+    flex-shrink: 0;
+}
+
+.book_image {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book_image img {
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: 5px;
-    object-fit: cover;
 }
 
 .preview_btn {
     width: 200px;
-    height: 45px;
-    margin-top: 10px;
+    height: 50px;
+    margin-top: 15px;
     border: 1px solid #ddd;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 6px;
+    cursor: pointer;
     font-size: 16px;
 }
 
 .book_info {
     flex: 1;
+    padding-top: 20px;
 }
 
-.book_info button {
-    width: 70px;
-    height: 35px;
-    margin-top: 15px;
-    border-radius: 40%;
-    border: 1px solid #1796eb;
-    color: #1796eb;
+.book_title {
+    font-size: 28px;
+}
+
+.book_rating {
+    margin-top: 5px;;
+}
+
+.book_rating .star,
+.book_rating .rating {
+    color: #f75d5d;
+    font-size: 14px;
+}
+
+.book_rating em {
+    color: #414141;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.book_people {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.book_people p {
+    margin: 0;
+}
+
+.book_translator {
+    padding-left: 13px;
+    border-left: 1px solid #ddd;
+}
+
+.book_publisher {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.book_info .like {
+    border: 1px solid rgb(29, 139, 167);
+    border-radius: 20px;
+    padding: 3px 14px;
+    color: rgb(29, 139, 167);
     background-color: white;
-    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 18px;
+}
+
+.book_info .select {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; 
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.book_info .select_label {
+    background-color: rgb(230, 230, 202);
+    color: rgb(173, 132, 132);
+    font-size: 11px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.book_info .select_arrow {
+    margin-left: auto;
+    font-size: 30px;
+    font-weight: 300;
+    color: #888;
+    line-height: 1;
+    position: relative;
+    top: -10px;
+    margin-right: 5px;
+    height: 20px;
+}
+
+.costbox {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.cost {
+    display: flex;
+    align-items: stretch;
+}
+
+.cost h4 {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ddd;
+    font-size: 15px;
+    background-color: #f0f0f06c;
+}
+
+.cost_detail {
+    flex: 1;
+    padding: 3px 0 3px 15px;
+}
+
+.cost_detail p {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.cost_detail p:last-child span {
+    color: #4a90e2;
+}
+
+.cost_detail span {
+    margin-left: auto;
 }
 
 .book_buttons {
     display: flex;
-    gap: 8px;
-    margin-top: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.book_buttons button {
-    height: 45px;
-    padding: 0 20px;
+.icon_btn {
+    display: flex;
+    gap: 5px;
+}
+
+.icon_btn button {
+    width: 50px;
+    height: 50px;
     border: 1px solid #ddd;
     background-color: white;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_btn img {
+    width: 22px;
+    height: 22px;
+}
+
+.buy_btn {
+    width:230px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 18px;
+}
+
+/* information */
+#information {
+    width: 100%;
+    margin-top: 30px
+}
+
+.information_book {
+    display: flex;
+    border: 2px solid #ebebeb;
+    background-color: #f0f0f06c;
     border-radius: 5px;
+}
+
+.information_left,
+.information_right{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 5px 30px;
+}
+
+.information_book ul {
+    display: flex;
+    min-height: 32px;
+    align-items: center;
+}
+
+.information_book li:first-child {
+    width: 80px;
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.information_book li:last-child {
+    flex: 1;
+    padding-left: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.information_right li:last-child img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 3px;
 }

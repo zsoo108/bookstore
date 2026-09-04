@@ -1236,35 +1236,67 @@ onlyridiBookData();
 // ----------------------- 서브 페이지 --------------------------- //
 
     // 서브 메인 책
+    const submainBooks = [
+        {
+            query: "용의자 X의 헌신",
+            title: "용의자 X의 헌신",
+            rating: "4.7점 (995)",
+            author: "히가시노 게이고",
+            translators: "양억관",
+            publisher: "재인"
+        }, 
+
+        ];
+
     async function submainBookData() {
 
-        const data = await fetchBooks("용의자 X의 헌신");
+        const item = submainBooks[0];
+
+        const data = await fetchBooks(item.query);
+
         const book = data.documents[0];
 
         if (!book) return;
 
-        document.querySelector(".submain_left").innerHTML = `
-        <div class="book_cover">
+        document.querySelector(".book_image").innerHTML = `
             <img src="${book.thumbnail}" alt="${book.title}">
-            <button class="preview_btn">미리보기</button>
-        </div>
-
-        <div class="book_info">
-            <p>소설 > 일본 소설</p>
-            <h2>${book.title}</h2>
-            <p>★4.7 (955) | 관심 500</p>
-            <p>${book.authors.join(", ")} 작가 ${book.translators.join(", ")} 출판</p>
-            <p>${book.publisher} 출판</p>
-            <button>+ 관심</button>
-
-            <div class="book_buttons">
-                <button>하트</button>
-                <button>장바구니</button>
-                <button>선물</button>
-                <button>소장</button>
-                
-            </div>
-        </div>
         `;
+
+        document.querySelector(".book_title").textContent =
+            book.title;
+
+        document.querySelector(".book_rating").innerHTML = `
+            <span>
+                ${
+                    item.rating === "0"
+                    ? `<em>★0</em>`
+                    : `
+                        <b class="star">★</b>
+                        <b class="rating">
+                            ${item.rating.split(" ")[0]}
+                        </b>
+                        <em>
+                            ${item.rating.substring(
+                                item.rating.indexOf(" ")
+                            )} | 관심 501
+                        </em>
+                    `
+                }
+            </span>
+        `;
+
+        document.querySelector(".book_author").textContent =
+            `${book.authors.join(", ")} 저자`;
+
+        if (book.translators && book.translators.length > 0) {
+            document.querySelector(".book_translator").textContent =
+                `${book.translators.join(", ")} 번역`;
+        } else {
+            document.querySelector(".book_translator").textContent = "";
+        }
+
+        document.querySelector(".book_publisher").textContent =
+            `${book.publisher} 출판`;
     }
+
     submainBookData();
